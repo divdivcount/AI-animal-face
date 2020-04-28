@@ -121,7 +121,7 @@ body {font-family: 'Recipekorea'; width:100%; height:100%;}
 .youtube{width:800px; height:100px; text-align:center; margin:0 auto;}
 .coupang{margin:0 auto; text-align:center; width:100%;}
 .coupang > a  > img {width:800px;text-align:center;}
-.kakao{display:none;}
+.kakao{display:none;margin:0 auto; text-align: center; width:800px;}
 /*모바일*/
 
 
@@ -163,7 +163,6 @@ body {font-family: 'Recipekorea'; width:100%; height:100%;}
 .youtube{width:100%;}
 .coupang > a  > img {width:100%;}
 body {overflow-x:hidden; }
-.kakao{display:block;}
 }
 
 
