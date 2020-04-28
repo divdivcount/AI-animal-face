@@ -45,10 +45,10 @@
 		</div>
 	</nav>
 		<div style="margin:0 auto; text-align:center; width:100%;">
-		<ins class="kakao_ad_area" style="display:none;" 
-		 data-ad-unit    = "DAN-1hvbjmk19zcc3" 
-		 data-ad-width   = "728" 
-		 data-ad-height  = "90"></ins> 
+		<ins class="kakao_ad_area" style="display:none;"
+		 data-ad-unit    = "DAN-1hvbjmk19zcc3"
+		 data-ad-width   = "728"
+		 data-ad-height  = "90"></ins>
 		<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 	</div>
 	<section class="section">
@@ -70,10 +70,10 @@
 			<p class="result-message" id="animalface_img"></p>
 			<h3 class="animal-tle" id="animal_title"></h3>
 			<p class="animal-message" id="animal_meg"></p>
-				
-               
+
+
                 <div class="addthis_inline_share_toolbox_9cun"></div>
-            
+
 			<input type="button" value="상세보기" class="pop pop-image" />
 			<div class="poplayer">
 			  <div class="pops_container">
@@ -100,14 +100,11 @@
 	<div class="youtube">
 		<iframe  width="100%" height="100%" src="https://www.youtube.com/embed/OI3fZJHQF8Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
-	<div style="margin:0 auto; text-align:center;">
-		<script src="https://ads-partners.coupang.com/g.js"></script>
-		<script>
-			new PartnersCoupang.G({ id:227069 });
-		</script>
+	<div class="coupang">
+		<a href="https://coupa.ng/bAc4tk" target="_blank"><img src="https://ads-partners.coupang.com/banners/227515?subId=&traceId=V0-301-879dd1202e5c73b2-I227515&w=728&h=90" alt=""></a>
 	</div>
 	<script>
-			
+
 		  popup();
 
 		  function popup(){
@@ -159,7 +156,7 @@
 
 	</script>
 
-	
+
 	<script type="text/javascript">
 		const URL = "https://teachablemachine.withgoogle.com/models/tKCXW9pcB/";
 		let model, labelContainer, maxPredictions, labelIMG;
@@ -174,14 +171,14 @@
                 var element = document.createElement("div")
                 element.classList.add("d-flex");
                 labelContainer.appendChild(element);
-            
+
 			}
 			labelIMG = document.getElementById("label-IMG");
             for (let i = 0; i < maxPredictions; i++) {
                 var element = document.createElement("div")
                 element.classList.add("d-fles");
                 labelIMG.appendChild(element);
-            
+
 			}
 		}
 
@@ -219,7 +216,7 @@
 					resultMessage = image.src = "image/10.png";
 					animalTitle = "<span class='seaotter_title'>귀여움 뿜뿜 해달상</span>"
 					animalMessage = "가만히 있어도 귀여움을 나타내는 당신! 어딜가서도 사람과 잘 어울리며 말도 잘 들어주는 당신! 미남, 미녀가 많다고 하죠! 당신은 해달상 입니다!"
-					break;					
+					break;
 				default:
 					resultMessage = "알수없음"
 			}
@@ -253,7 +250,7 @@
 					break;
 				case "seaotter":
 					labelName = "해달"
-					break;					
+					break;
 				default:
 					labelName = "알수없음"
 			}
@@ -261,7 +258,7 @@
 
 				//prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability)); 값에 따른 배열정리
 				//prediction[0] 가장 높은 순서 출력
-				
+
 			    var labelIMG;
                 switch (prediction[i].className) {
 				case "seal":
@@ -278,7 +275,7 @@
 					break;
 				case "seaotter":
 					labelIMG = img.src = "<span class='rabbit_img'><img src='image/10.png'></span>";
-					break;					
+					break;
 				default:
 					labelIMG = "알수없음"
 			}
@@ -299,7 +296,7 @@
 					break;
 				case "seaotter":
 					opty = $('.rabbit_img').css('opacity', '1');
-					break;					
+					break;
 				default:
 					opty = "알수없음"
 			}
