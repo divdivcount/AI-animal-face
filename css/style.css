@@ -1,0 +1,166 @@
+body {font-family: 'Recipekorea'; width:100%; height:100%;}
+@font-face { font-family: 'Recipekorea'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff'); font-weight: normal; font-style: normal; }
+.file-upload {width: 80%; height: 100%; margin: 0 auto;padding: 20px;}
+.file-upload-btn:hover {background: #1AA059;color: #ffffff;transition: all .2s ease;cursor: pointer;}
+.file-upload-btn:active {border: 0;transition: all .2s ease;}
+.sd {width:200px;}
+.poplayer{display: none; position: absolute; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); left:50%; top:50%; transform:translate(-50%,-50%);}
+.pop_container{position: absolute; width: 400px; height: 600px; background: #ffffff; padding: 50px; left: 50%; top:50%; transform:translate(-50%,-50%); box-shadow:0 0 6px #333333;}
+.pop_header > h1{font-size: 1.2rem; text-align: center; border-top:solid 1px #222328; border-bottom:solid 1px #222328; padding: 10px 0;}
+.pop_contents{}
+.close_pop{position: absolute; width: 200px; height: 40px; border:none; background: #222328; color:#ffffff; font-size: 17px; bottom: 15px; left: 50%; transform:translateX(-50%);}
+.file-upload-content {display: none;text-align: center; margin:0 auto; width:400px; height:100%;}
+.file-upload-input {position: absolute;margin: 0;padding: 0;width: 100%;height: 100%;outline: none;opacity: 0;cursor: pointer;top:50%;left:50%;transform:translate(-50%,-50%);}
+.image-upload-wrap {border: 4px dashed #ffd480; position: relative;width:350px; margin:0 auto;}
+.image-dropping,.image-upload-wrap:hover {background-color: #ffd480;border: 4px dashed #ffffff;}
+.drag-text {text-align: center;}
+.drag-text h3{width:80%;}
+.file-upload-image {width:400px;margin: auto;padding: 20px;border:solid 5px #ddd;margin-bottom:10px;}
+/*네비*/
+.nav_display{padding:2.1% 7.7%;background-color:#eee;}
+.navbar-light .navbar-toggler{border-color:#eee;}
+/*창*/
+.section{margin-top:50px;}
+.title{font-family:'Recipekorea';line-height:1.67;text-align:center;color:#35465d;width:100%;}
+.subtitle{line-height:1.53;text-align:center;color:#35465d;}
+.upload_text{width:50%;margin:0 auto;font-family:'Recipekorea';font-size:1.5rem;text-align:center;font-weight:100;line-height:1.53;}
+/*무슨 상인지 이미지로 표현*/
+.result-message{display:none;}
+
+.animal-label img{}
+
+.dog_img{width:100px; position:absolute; top:400px; left:0px;opacity:0.4;}
+.dinosaur_img{width: 100px; position:absolute;top:400px; left:70px;opacity:0.4;}
+.hores_img {width: 100px; position:absolute;top:400px; left:155px;opacity:0.4;}
+.cat_img {width: 100px; position:absolute;top:400px; right:70px;opacity:0.4;}
+.rabbit_img{width: 100px; position:absolute;top:400px; right:0px;opacity:0.4;}
+
+/*이미지 순서들*/
+.dog_img img{width: 100px;}
+.dinosaur_img img{width: 100px;}
+.hores_img img{width: 100px;}
+.cat_img img{width: 100px;}
+.rabbit_img img{width: 100px;}
+
+/*로딩 이미지*/
+.loader {
+  
+  border: 3px solid #dddddd; /* Light grey */
+  border-top: 3px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 2s linear infinite;
+  margin:0 auto;
+	
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/*bar 색상 box색상*/
+.animal-tle{margin-top:10px;}
+/*토끼*/
+.rabbit-bar {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;background-color: rgba(235, 166, 190, 1);margin-top:10px;}
+.rabbit-box {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;width: 100%;background-color: rgba(235, 166, 190, 0.2);margin-top:10px;}
+.rabbit_title{color: rgba(235, 166, 190, 1); background-color: rgba(235, 166, 190, 0.2); border-radius:10px;padding-top: 10px;}
+/*말*/
+.hores-bar {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;background-color: rgba(216, 215, 197, 1);margin-top:10px;}
+.hores-box {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;width: 100%;background-color: rgba(216, 215, 197, 0.2);margin-top:10px;}
+.hores_title{color: rgba(216, 215, 197, 1); background-color: rgba(216, 215, 197, 0.2); border-radius:10px;padding-top: 10px;}
+/*고양이*/
+.cat-bar {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;background-color: rgba(200, 200, 200, 1);margin-top:10px;}
+.cat-box {position: absolute;top: 0;left: 0;height: 2rem; border-radius: 10px;width: 100%;background-color: rgba(200, 200, 200, 0.2);margin-top:10px;}
+.cat_title{color: rgba(200, 200, 200, 10); background-color: rgba(200, 200, 200, 0.2); border-radius:10px;padding-top: 10px;}
+/*강아지*/
+.dog-bar {position: absolute;top: 0;left: 0;height: 2rem; border-radius: 10px; background-color: rgba(255, 174, 0, 1);margin-top:10px;}
+.dog-box {position: absolute;top: 0;left: 0; height: 2rem;border-radius: 10px;width: 100%;background-color: rgba(255, 174, 0, 0.2);margin-top:10px;}
+.dog_title{color: rgba(255, 174, 0, 1); background-color:rgba(255, 174, 0, 0.2); border-radius:10px;padding-top: 10px;}
+/*공룡*/
+.dinosaur-bar {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;background-color: rgba(97, 157, 97, 1);margin-top:10px;}
+.dinosaur-box {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;width: 100%;background-color: rgba(97, 157, 97, 0.2);margin-top:10px;}
+.dinosaur_title{color: rgba(97, 157, 97, 1); background-color:rgba(97, 157, 97, 0.2); border-radius:10px;padding-top: 10px;}
+
+.animal-label {width: 100px;text-align: left;height: 2rem;margin-top:10px;}
+/*물개*/
+.seal-bar {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;background-color: rgba(206, 206, 206, 1);margin-top:10px;}
+.seal-box {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;width: 100%;background-color: rgba(206, 206, 206, 0.2);margin-top:10px;}
+.seal_title{color: rgba(206, 206, 206, 1); background-color: rgba(206, 206, 206, 0.2); border-radius:10px;padding-top: 10px;}
+/*가오리*/
+.stingray-bar {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;background-color: rgba(251, 214, 101, 1);margin-top:10px;}
+.stingray-box {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;width: 100%;background-color: rgba(251, 214, 101, 0.2);margin-top:10px;}
+.stingray_title{color: rgba(251, 214, 101, 1); background-color: rgba(251, 214, 101, 0.2); border-radius:10px;padding-top: 10px;}
+/*팽귄*/
+.penguin-bar {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;background-color: rgba(91, 87, 170, 1);margin-top:10px;}
+.penguin-box {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;width: 100%;background-color: rgba(91, 87, 170, 0.2);margin-top:10px;}
+.penguin_title{color: rgba(91, 87, 170, 1); background-color: rgba(91, 87, 170, 0.2); border-radius:10px;padding-top: 10px;}
+/*해달*/
+.seaotter-bar {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;background-color: rgba(163, 137, 120, 1);margin-top:10px;}
+.seaotter-box {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;width: 100%;background-color: rgba(163, 137, 120, 0.2);margin-top:10px;}
+.seaotter_title{color: rgba(163, 137, 120, 1); background-color: rgba(163, 137, 120, 0.2); border-radius:10px;padding-top: 10px;}
+/*거북이*/
+.turtle-bar {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;background-color: rgba(101, 199, 124, 1);margin-top:10px;}
+.turtle-box {position: absolute;top: 0;left: 0;height: 2rem;border-radius: 10px;width: 100%;background-color: rgba(101, 199, 124, 0.2);margin-top:10px;}
+.turtle_title{color: rgba(101, 199, 124, 1); background-color: rgba(101, 199, 124, 0.2); border-radius:10px;padding-top: 10px;}
+
+#img_1 > img{margin-top:35px;width:100%;}
+.pop{margin-bottom:30px;}
+.pop-image {margin-top:30px; margin-bottom:30px; width: 100px;margin: 0; background: #fff;/*버튼 색상*/border: none;padding: 10px; border-radius: 4px; border-bottom: 4px solid #ddd;/*하단 그림자*/transition: all .2s ease; outline: none;text-transform: uppercase;font-weight: 700;}
+.pop-image:hover { background: #35465d;color: #ffffff;transition: all .2s ease;cursor: pointer;}
+.pop-image:active {border: 0;transition: all .2s ease;}
+/*리무브 버튼*/
+.remove-image {width: 200px;margin-top: 10px; background: #fff;/*버튼 색상*/border: none;padding: 10px; border-radius: 4px; border-bottom: 4px solid #ddd;/*하단 그림자*/transition: all .2s ease; outline: none;text-transform: uppercase;font-weight: 700;}
+.remove-image:hover { background: #35465d;color: #ffffff;transition: all .2s ease;cursor: pointer;}
+.remove-image:active {border: 0;transition: all .2s ease;}
+.pop_contents > h3 {margin-bottom:30px;}
+
+.youtube{width:800px; height:100px; text-align:center; margin:0 auto;}
+/*모바일*/
+
+
+
+@media screen and (max-width: 992px) {
+
+ html{font-size:17px;}
+.file-upload-image{width:85%;}
+.pop_container{width:450px;height:680px;}
+.animal-label{width:22%;}
+.dog_img img{width:125px;position: absolute; top: 0px; left:0;}
+.dinosaur_img img{width:125px;position: absolute; top: 0px; left:10px;}
+.hores_img img{width:125px;position: absolute; top: 0px; left:9px;}
+.cat_img img{width:125px;position: absolute; top: 0px; right:10px;}
+.rabbit_img img{width:125px;position: absolute; top: 0px; right:0px;}
+.file-upload-content{width:85%;}
+.image-upload-wrap{width:72%;}
+.drag-text h3{width:80%;}
+.youtube{width:100%;}
+
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+ html{font-size: 0.75rem;}
+.file-upload-image{width:100%;}
+.image-upload-wrap{width:60%;}
+.pop_container{width:300px;height:480px;}
+.animal-label{width:40%;}
+.dog_img img{width:80px;position: absolute; top: -100px; left:0;}
+.dinosaur_img img{width:80px;position: absolute; top: -100px;left:-15px;}
+.hores_img img{width:80px;position: absolute; top: -100px;left:-43px;}
+.cat_img img{width:80px;position: absolute; top: -100px;right:-15px;}
+.rabbit_img img{width:80px;position: absolute; top: -100px;right:0px;}
+.file-upload-content{width:100%;}
+.drag-text h3{width:80%;}
+.youtube{width:100%;}
+}
+
+
+@media screen and (max-width: 450px) {
+ html{font-size: 0.75rem;}
+.file-upload-image{width:100%;}
+.image-upload-wrap{width:100%;}
+}

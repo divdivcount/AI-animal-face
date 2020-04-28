@@ -1,0 +1,13 @@
+.pops_container{position: absolute; width: 450px; height: 600px; background: #ffffff; padding: 50px; left: 50%; top:50%; transform:translate(-50%,-50%); box-shadow:0 0 6px #333333;}
+.penguin_img {width: 100px; position:absolute;top:400px; right:100px;opacity:0.4;}
+.penguin_img img{width:100px;}
+@media screen and (max-width: 992px) {
+.pops_container{width:500px;height:680px;}
+.penguin_img img{width:125px;position: absolute; top: 0px; right:10px;}
+}
+
+@media screen and (max-width: 600px) {
+ 
+.pops_container{width:350px;height:480px;}
+.penguin_img img{width:80px;position: absolute; top: -100px;right:-15px;}
+}
