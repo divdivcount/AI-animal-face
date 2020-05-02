@@ -1,0 +1,63 @@
+body {font-family: 'Recipekorea'; width:100%; height:100%;}
+@font-face { font-family: 'Recipekorea'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff'); font-weight: normal; font-style: normal; }
+/*네비*/
+.nav_display{padding:2.1% 7.7%;background-color:#eee;}
+.navbar-light .navbar-toggler{border-color:#eee;}
+/*컨테이너 작업*/
+.container{width:100%; height: 100%;  margin: 100px auto;}
+.float_lef{text-align:center; float: left;width:50%;box-sizing: border-box;}
+.text{text-align:center;}
+.clear{clear:both;}
+.han{background-image: url(../image/han.png); background-position:center; background-size:50%; background-repeat:no-repeat; width:100%; height:300px; background-color:#fff; border:none;text-align:center;}
+/*로딩 이미지*/
+.loader {
+
+  border: 3px solid #dddddd; /* Light grey */
+  border-top: 3px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 2s linear infinite;
+  margin:0 auto;
+
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media screen and (max-width: 900px) {
+
+	.container{width:100%; margin-top:50px;}
+	.container_1{width:100%;}
+	.han{background-image: url(../image/han.png); background-position:center; background-size:50%; background-repeat:no-repeat; width:100%; height:150px; background-color:#fff; border:none;text-align:center;}
+	.float_lef{width:50%; height:150px;}
+}
+
+@media screen and (max-width: 768px) {
+
+	.container{width:100%; margin-top:100px;}
+	.container_1{width:100%;}
+	.han{background-image: url(../image/han.png); background-position:center; background-size:50%; background-repeat:no-repeat; width:100%; height:170px; background-color:#fff; border:none;text-align:center;}
+	.float_lef{width:50%; height:200px; margin-bottom:50px;}
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+	.container{width:100%; margin-top:50px;}
+	.container_1{width:100%;}
+	.han{background-image: url(../image/han.png); background-position:center; background-size:50%; background-repeat:no-repeat; width:100%; height:120px; background-color:#fff; border:none;text-align:center;}
+	.float_lef{width:50%; height:150px;}
+}
+
+
+@media screen and (max-width: 450px) {
+	.float_lef{width:50%; height:150px;}
+	.container{width:100%;  margin-top:5px;}
+	.container_1{width:100%;}
+	.han{background-image: url(../image/han.png); background-position:center; background-size:50%; background-repeat:no-repeat; width:100%; height:120px; background-color:#fff; border:none;text-align:center;}
+	
+}

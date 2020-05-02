@@ -1,0 +1,97 @@
+<!Doctype html>
+	<html lang="kr">
+		<head>
+				<!-- Required meta tags -->
+				<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+				<!-- Bootstrap CSS -->
+				<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+				<!-- Bootstrap CSS -->
+				<link rel="stylesheet" href="css/sub2_style.css">
+				<script src="script/jquery-1.12.4.min.js"></script>
+		</head>
+		<body>
+				<nav class="navbar navbar-expand-lg navbar-light nav_display">
+				<a class="navbar-brand" href="subpage2.html">음식랜덤!</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">육지 동물상 닮은꼴
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="subpage.html">바다 동물상 닮은꼴</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://www.youtube.com/channel/UCQNE2JmbasNYbjGAcuBiRRg/videos">조코딩 유튜브</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<input type = "button" value = "확인" id="colorW">
+			<p class="result-message" id="animalface_img"></p>
+			<h3 class="animal-tle" id="animal_title"></h3>
+			<p class="animal-message" id="animal_meg"></p>
+			
+			<script type="text/javascript">
+			window.onload = function() {
+			document.getElementById("colorW").onclick = function() {
+            for(var i = 0; i < 4; i++){
+
+			}
+			var personArr = [0,1,2,3,4];
+
+
+			Array.prototype.shuffle = function(){
+			  return this.concat().sort(
+				function(){return Math.random() - Math.random();}
+			  );
+			}
+			console.log(personArr.shuffle()[i]);
+			var arr = personArr.shuffle();
+			var image = document.getElementById("myface_img")
+			var img = document.getElementById("animalface_img")
+			var resultMessage, animalTitle ,animalMessage
+			switch (personArr.shuffle()[i]) {
+				case personArr[0]:
+					resultMessage = "<span class='dog_img'><img src='image/6.png'></span>";
+					animalTitle = "<span class='seal_title'>순딩순딩 물개상</span>"
+					animalMessage = "보기만해도 보호본능을 타오르게 하는 당신! 가만히 있었도 이성이 다가오는 당신! 순딩순딩하고 귀여운 얼굴이네요! 하지만 물개 성격은 반전이 있다는거! 당신은 물개상 입니다!"
+					break;
+				case personArr[1]:
+					resultMessage = "<span class='dog_img'><img src='image/7.png'></span>";
+					animalTitle = "<span class='turtle_title'>동글동글 거북이상</span>"
+					animalMessage = "동물 관상법에서 가장 최상위인 당신! 나중에 크게 성공할 당신 ! 동글동글한 얼굴형에 큰 눈! 코...코는 납작하지만! 매력있는 얼굴이네요! 거북이상은 천복을 가지고 있다고 해요! 포기하지말고 열심히 하면 복이 찾아올꺼에요! 당신은 동글동글 거북이상 입니다!  "
+					break;
+				case personArr[2]:
+					resultMessage = "<span class='dog_img'><img src='image/8.png'></span>";
+					animalTitle = "<span class='stingray_title'>넓적한 가오리상</span>"
+					animalMessage = "얼굴이 넓적한 당신!(...죄송해요) 온순하고 하는 말을 잘 들어주는 당신! 당신은 가오리상 입니다! (얼굴이 넓게 찍혔다면 다른 사진으로 다시 부탁드립니다!)"
+					break;
+				case personArr[3]:
+					resultMessage = "<span class='dog_img'><img src='image/9.png'></span>";
+					animalTitle = "<span class='penguin_title'>아장아장 팽귄상</span>"
+					animalMessage = "둥글둥글한 얼굴에 코가 높은 당신! 동료애가 많으며 호기심이 많고 즐기는걸 좋아하는 당신! 순진하고 온순하며 불합리한 상황을 못 참는 당신! 당신은 귀여운 펭귄상 입니다! "
+					break;
+				case personArr[4]:
+					resultMessage = "<span class='dog_img'><img src='image/10.png'></span>";
+					animalTitle = "<span class='seaotter_title'>귀여움 뿜뿜 해달상</span>"
+					animalMessage = "가만히 있어도 귀여움을 나타내는 당신! 어딜가서도 사람과 잘 어울리며 말도 잘 들어주는 당신! 미남, 미녀가 많다고 하죠! 당신은 해달상 입니다!"
+					break;
+				default:
+					resultMessage = "알수없음"
+			}
+			$('.result-message').html(resultMessage);
+			$('.animal-tle').html(animalTitle);
+			$('.animal-message').html(animalMessage);
+          }
+		  
+		}
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		</body>
+	</html>
