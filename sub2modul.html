@@ -35,21 +35,19 @@
 			<input type = "button" value = "확인" id="colorW">
 
 			<div class="example">
-		  <div class="example" id="roll_list">
-		    <ul>
-		      <li>한식</li>
-			  <li>중식</li>
-			  <li>일식</li>
-			  <li>1</li>
-			  <li>2</li>
-			  <li>3</li>
-			  <li>4</li>
-			  <li>5</li>
-		    </ul>
-		  </div>
-
+				  <div class="example" id="roll_list">
+				    <ul>
+						    <li>한식</li>
+							  <li>중식</li>
+							  <li>일식</li>
+							  <li>1</li>
+							  <li>2</li>
+							  <li>3</li>
+							  <li>4</li>
+							  <li>5</li>
+				    </ul>
+				  </div>
 		  <button id="pause">시작</button>
-
 		</div>
 
 			<p class="result-message" id="animalface_img"></p>
@@ -113,33 +111,33 @@
 		}
 		</script>
 		<script type="text/javascript">
-const ssd = ["한식","중식","일식","1" ,"2" ,"3" ,"4" ,"5"];
-console.log(document.getElementsByTagName('ul')[0]);
-  const li = document.getElementsByTagName('ul')[0].getElementsByTagName('li');
+				const ssd = ["한식","중식","일식","1" ,"2" ,"3" ,"4" ,"5"];
+				console.log(document.getElementsByTagName('ul')[0]);
+  			const li = document.getElementsByTagName('ul')[0].getElementsByTagName('li');
         for(const n of li) {
         ssd.push(n.innerText);
         }
         console.log(ssd[Math.floor(Math.random()*li.length)])
-</script>
-<script type="text/javascript">
+		</script>
+		<script type="text/javascript">
 
-		$(function() {
-		  $('#roll_list').vTicker({speed:100, pause:0, mousePause : false, animation:'none',direction: 'up'});
-		  $('#roll_list').vTicker('pause', true);
-		  $('#pause').click(function() {
-			$this = $(this);
-			if($this.text() == '시작') {
-			  $('#roll_list').vTicker('pause', false);
-			  $this.text('멈춤');
-			}
-			else {
-				timerId = setTimeout(()=> $('#roll_list').vTicker({pause:10}), 300);
-				setInterval(() => { clearTimeout(timerId); $('#roll_list').vTicker('pause', true); }, 2000);
+				$(function() {
+				  $('#roll_list').vTicker({speed:100, pause:0, mousePause : false, animation:'none',direction: 'up'});
+				  $('#roll_list').vTicker('pause', true);
+				  $('#pause').click(function() {
+					$this = $(this);
+					if($this.text() == '시작') {
+					  $('#roll_list').vTicker('pause', false);
+					  $this.text('멈춤');
+					}
+					else {
+						timerId = setTimeout(()=> $('#roll_list').vTicker({pause:10}), 300);
+						setInterval(() => { clearTimeout(timerId); $('#roll_list').vTicker('pause', true); }, 2000);
 
-				}
-		  });
-		});
-</script>
+						}
+				  });
+				});
+		</script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 		</body>
 	</html>
